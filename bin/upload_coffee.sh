@@ -1,14 +1,6 @@
 script_dir=$(dirname "$(realpath "$0")")
 source "${script_dir}/upload_configs.conf"
 
-# upload_configs.conf
-# SERVER_IP=
-# SERVER_PORT=
-# SERVER_USER=
-# SERVER_DIRECTORY=
-# SERVER_SH_PATH=
-# LOCAL_DIRECTORY=
-
 cd $LOCAL_DIRECTORY || { echo "Failed to change directory"; exit 1; }
 
 mogrify -resize 15% * || { echo "Failed to resize images"; exit 1; }
